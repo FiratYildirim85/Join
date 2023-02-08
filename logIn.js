@@ -4,7 +4,7 @@ let rmCheck;
 let emailInput;
 let emailReset;
 
-setURL("https://join.firat-yildirim.de/smallest_backend_ever");
+setURL("https://www.join.firat-yildirim.de/smallest_backend_ever");
 
 /**
  * loading all data from the backend

@@ -634,7 +634,7 @@ function openTaskAssignedToTemplate(i, y) {
    return /*html*/ `
     <div class="openTaskAssignedToFrame" id="openTaskAssignedToFrame">
         <div class="openTaskAssignedToInitials" id="initials">${allUsersAndContacts[y].initials}</div>
-        <p class="openTaskAssignedToName" id="fullName">${getFirstName(i, y)} ${getSecondName(i, y)}</p>
+        <p class="fullName" id="fullName">${getFirstName(i, y)} ${getSecondName(i, y)}</p>
     </div>
     `;
 }
@@ -831,8 +831,8 @@ function changeTaskTemplate(title, description, dueToDate, i) {
       </div>
       <p class="changeTaskP">Assigned to</p>
       <div class="assignedto-popup" id="changeTaskAssingedToSelect"></div>
-      <p class="changeTaskP">Subtasks</p>
-      <div id="changeTaskSubtasks"></div>
+      <!--<p class="changeTaskP">Subtasks</p>
+      <div id="changeTaskSubtasks"></div> -->
       <img class="addChanges" src="img/checkmark-48.png" alt="OK" onclick="addChanges(${i})">
       <p class="changeTaskP">Category</p>
       <select class="category-popup margin-bottom" id="changeTaskCategory">
@@ -848,7 +848,7 @@ function changeTaskTemplate(title, description, dueToDate, i) {
 
 function showSubtasksInChangeTask(i) {
    let subtasks = document.getElementById("changeTaskSubtasks");
-   subtasks.innerHTML = "";
+   subtasks.innerHTML = " ";
    for (let x = 0; x < toDosArray[i].subtasks.length; x++) {
       subtasks.innerHTML += subtaskTemplate(i, x);
    }
